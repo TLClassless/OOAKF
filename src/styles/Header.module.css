@@ -1,0 +1,38 @@
+.test {
+  height: 100vh;
+  width: 100vw;
+  background-color: #971236;
+}
+
+.branding {
+  margin-left: 2rem;
+  color: #fff;
+}
+
+.branding h1,
+h3 {
+  margin: 0;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  align-items: center;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  text-decoration: none;
+  margin-right: 1rem;
+  color: #fff;
+}
+
+.navigation li {
+  margin-right: 1rem;
+}
