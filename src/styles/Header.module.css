@@ -1,7 +1,5 @@
 .test {
   height: 100vh;
-  width: 100vw;
-  background-color: #971236;
 }
 
 .branding {
@@ -43,4 +41,9 @@ h3 {
 
 .navigation li {
   margin-right: 1rem;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
 }

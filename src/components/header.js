@@ -7,24 +7,40 @@ export class header extends Component {
     return (
       <div className={style.navbar}>
         <div className={style.branding}>
-          <h1>OOAKF</h1>
+          <a href="/">
+            <h1>OOAKF</h1>
+          </a>
           {/* <h3>Call me Oak</h3> */}
         </div>
         <ul className={style.navigation}>
-          <li>About</li>
-          <li>Donate</li>
-          <li>Subscribe</li>
           <li>
-            <FaTwitch />
+            <a href="/about">About</a>
           </li>
           <li>
-            <FaYoutube />
+            <a href="https://streamlabs.com/ooakf/tip">Donate</a>
           </li>
           <li>
-            <FaTwitter />
+            <a href="https://www.twitch.tv/products/ooakf">Subscribe</a>
           </li>
           <li>
-            <FaInstagram />
+            <a href="https://twitch.tv/ooakf">
+              <FaTwitch />
+            </a>
+          </li>
+          <li>
+            <a href="https://youtube.com/theoneofakindfilms">
+              <FaYoutube />
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/ooakf">
+              <FaTwitter />
+            </a>{" "}
+          </li>
+          <li>
+            <a href="https://instagram.com/one_of_a_kind_films">
+              <FaInstagram />
+            </a>
           </li>
         </ul>
       </div>
