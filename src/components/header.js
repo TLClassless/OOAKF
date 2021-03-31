@@ -8,7 +8,7 @@ export class header extends Component {
       <div className={style.navbar}>
         <div className={style.branding}>
           <h1>OOAKF</h1>
-          <h3>Call me Oak</h3>
+          {/* <h3>Call me Oak</h3> */}
         </div>
         <ul className={style.navigation}>
           <li>About</li>

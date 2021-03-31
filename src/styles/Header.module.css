@@ -5,8 +5,16 @@
 }
 
 .branding {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin-left: 2rem;
   color: #fff;
+}
+
+.branding h1 {
+  font-size: 5rem;
+  font-weight: 700;
 }
 
 .branding h1,
