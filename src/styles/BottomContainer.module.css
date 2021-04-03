@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  margin: 1rem 5rem;
+  flex-direction: column;
+  max-width: 800px;
+}
+
+.clips {
+  display: flex;
+  width: 100%;
+}
+
+.youtube {
+  display: flex;
+  width: 100%;
+}
+
+.vods {
+  display: flex;
+  width: 100%;
+}
