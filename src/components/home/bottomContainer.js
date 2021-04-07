@@ -15,8 +15,10 @@ export class bottomContainer extends Component {
     };
     axios
       .get(
-        "https://api.twitch.tv/kraken/clips/top?limit=10&channel=moonmoon_ow",
-        { headers: headers }
+        "https://api.twitch.tv/kraken/clips/top?limit=10&period=all&channel=OOAKF",
+        {
+          headers: headers,
+        }
       )
       .then(function (response) {
         console.log(response);
