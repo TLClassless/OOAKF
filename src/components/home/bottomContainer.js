@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import style from "../../styles/BottomContainer.module.css";
-import ReactDOM from "react-dom";
 import axios from "axios";
 
 const CLIENT_ID = process.env.REACT_APP_CLIENT_ID;
@@ -22,6 +21,7 @@ export class bottomContainer extends Component {
       )
       .then(function (response) {
         console.log(response);
+        console.log(response.data.clips[0].title);
       });
   }
 
