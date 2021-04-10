@@ -6,7 +6,14 @@ const CLIENT_ID = process.env.REACT_APP_CLIENT_ID;
 const TWITCH_SECRET = process.env.REACT_APP_API_SECRET;
 
 export class twitchClips extends Component {
-  componentDidMount() {
+  constructor() {
+    super();
+    this.state = {
+      data: [],
+    };
+  }
+
+  async componentDidMount() {
     console.log(CLIENT_ID, TWITCH_SECRET);
 
     const headers = {
@@ -14,7 +21,7 @@ export class twitchClips extends Component {
       Accept: "application/vnd.twitchtv.v5+json",
     };
 
-    axios
+    await axios
       .get(
         "https://api.twitch.tv/kraken/clips/top?limit=10&period=all&channel=OOAKF",
         {
@@ -23,24 +30,26 @@ export class twitchClips extends Component {
       )
       .then((response) => {
         const thisData = response.data.clips;
-        console.log(thisData);
-        console.log(thisData[0].title);
-        console.log(thisData[0].url);
-        console.log(thisData[0].thumbnails.small);
+        this.setState({
+          data: thisData,
+        });
       })
+
       .catch((error) => console.error("Error"));
   }
 
   render() {
+    const Array = this.state.data;
+
+    Array.forEach((element) => console.log(element.title));
+    Array.forEach((element) => console.log(element.thumbnails.small));
+    Array.forEach((element) => console.log(element.url));
+
     return (
       <div>
         <div className={style.clipContainer}>
-          <img
-            src="https://clips-media-assets2.twitch.tv/41523515292-offset-4512-preview-260x147.jpg"
-            alt="thumbnail"
-            className={style.thumbnail}
-          />
-          <h3 className={style.clipTitle}>{}</h3>
+          <img src={"/"} alt="thumbnail" className={style.thumbnail} />
+          <h3 className={style.clipTitle}>HelloWorld</h3>
         </div>
       </div>
     );
