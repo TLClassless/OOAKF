@@ -41,15 +41,35 @@ export class twitchClips extends Component {
   render() {
     const Array = this.state.data;
 
-    Array.forEach((element) => console.log(element.title));
-    Array.forEach((element) => console.log(element.thumbnails.small));
-    Array.forEach((element) => console.log(element.url));
+    // Array.forEach((element) => console.log(element.title));
+    // Array.forEach((element) => console.log(element.thumbnails.small));
+    // Array.forEach((element) => console.log(element.url));
+
+    const Titles = Array.map(function (element) {
+      return element.title;
+    });
+
+    const Thumbnails = Array.map(function (element) {
+      return element.thumbnails.small;
+    });
+
+    const URLs = Array.map(function (element) {
+      return element.url;
+    });
 
     return (
       <div>
         <div className={style.clipContainer}>
-          <img src={"/"} alt="thumbnail" className={style.thumbnail} />
-          <h3 className={style.clipTitle}>HelloWorld</h3>
+          <a href={URLs[0]}>
+            <img
+              src={Thumbnails[0]}
+              alt="thumbnail"
+              className={style.thumbnail}
+            />
+          </a>
+          <a href={URLs[0]}>
+            <h3 className={style.clipTitle}>{Titles[0]}</h3>
+          </a>
         </div>
       </div>
     );
