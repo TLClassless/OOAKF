@@ -1,8 +1,41 @@
 .container {
   display: flex;
-  margin: 1rem 5rem;
+  justify-items: center;
+  align-items: center;
+  width: 100%;
   flex-direction: column;
-  max-width: 800px;
+  color: #172c2d;
+}
+
+.clipsContainer {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  overflow-y: hidden;
+  overflow-x: scroll;
+}
+
+.clipTitle {
+  margin: 0;
+  font-size: 1rem;
+  color: #172c2d;
+}
+
+.clipViews {
+  margin: 0;
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: rgb(122, 122, 122);
+}
+
+.clipContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.spacer {
+  display: block;
+  width: 1rem;
 }
 
 .clips {

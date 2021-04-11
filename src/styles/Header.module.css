@@ -2,6 +2,23 @@
   height: 100vh;
 }
 
+.branding a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.branding a:hover {
+  color: transparent;
+  -webkit-text-stroke: 4px #fff;
+}
+
+@supports not (-webkit-text-stroke: 4px #fff) {
+  .branding a:hover {
+    text-shadow: 3px 3px 0 #fff, -1px -1px 0 #fff, 1px -1px 0 #fff,
+      -1px 1px 0 #fff, 1px 1px 0 #fff;
+  }
+}
+
 .branding {
   display: flex;
   flex-direction: column;

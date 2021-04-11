@@ -6,8 +6,8 @@ export class bottomContainer extends Component {
   render() {
     return (
       <main className={style.container}>
+        <h1>Most Viewed Twitch Clips</h1>
         <Clips />
-        <div className={style.clips}>clips</div>
         <div className={style.youtube}>youtube</div>
         <div className={style.vods}>vods</div>
       </main>
