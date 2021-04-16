@@ -33,6 +33,10 @@
   flex-direction: column;
 }
 
+.clipContainer img {
+  height: 10rem;
+}
+
 .spacer {
   display: block;
   width: 1rem;
@@ -51,4 +55,14 @@
 .vods {
   display: flex;
   width: 100%;
+}
+
+@media only screen and (max-width: 800px) {
+  .clipsContainer {
+    width: 100%;
+  }
+
+  .clipContainer img {
+    height: 8rem;
+  }
 }
