@@ -11,6 +11,7 @@ export class bottomContainer extends Component {
       <main className={style.container}>
         <h1>Most Viewed Twitch Clips</h1>
         <Clips />
+        <h1>The Lie in Podcast</h1>
         <Youtube />
         <div className={style.youtube}>youtube</div>
         <div className={style.vods}>vods</div>

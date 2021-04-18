@@ -1,6 +1,12 @@
 import React, { Component } from "react";
 import style from "../styles/Header.module.css";
-import { FaTwitch, FaYoutube, FaTwitter, FaInstagram } from "react-icons/fa";
+import {
+  FaTwitch,
+  FaYoutube,
+  FaTwitter,
+  FaInstagram,
+  FaTrophy,
+} from "react-icons/fa";
 
 export class header extends Component {
   render() {
@@ -20,7 +26,12 @@ export class header extends Component {
             <a href="https://streamlabs.com/ooakf/tip">Donate</a>
           </li>
           <li>
-            <a href="https://www.twitch.tv/products/ooakf">Subscribe</a>
+            <a
+              className={style.subscribe}
+              href="https://www.twitch.tv/products/ooakf"
+            >
+              Subscribe
+            </a>
           </li>
           <li>
             <a href="https://twitch.tv/ooakf">
@@ -40,6 +51,11 @@ export class header extends Component {
           <li>
             <a href="https://instagram.com/one_of_a_kind_films">
               <FaInstagram />
+            </a>
+          </li>
+          <li>
+            <a href="https://www.speedrun.com/user/OOAKF">
+              <FaTrophy />
             </a>
           </li>
         </ul>

@@ -141,6 +141,86 @@ export class twitchClips extends Component {
             <h4 className={style.clipViews}>Views: {Views[4]}</h4>
           </a>
         </div>
+
+        <div className={style.spacer}></div>
+
+        <div className={style.clipContainer}>
+          <a href={URLs[5]}>
+            <img
+              src={Thumbnails[5]}
+              alt="thumbnail"
+              className={style.thumbnail}
+            />
+          </a>
+          <a href={URLs[5]}>
+            <h3 className={style.clipTitle}>{Titles[5]}</h3>
+            <h4 className={style.clipViews}>Views: {Views[5]}</h4>
+          </a>
+        </div>
+
+        <div className={style.spacer}></div>
+
+        <div className={style.clipContainer}>
+          <a href={URLs[6]}>
+            <img
+              src={Thumbnails[6]}
+              alt="thumbnail"
+              className={style.thumbnail}
+            />
+          </a>
+          <a href={URLs[6]}>
+            <h3 className={style.clipTitle}>{Titles[6]}</h3>
+            <h4 className={style.clipViews}>Views: {Views[6]}</h4>
+          </a>
+        </div>
+
+        <div className={style.spacer}></div>
+
+        <div className={style.clipContainer}>
+          <a href={URLs[7]}>
+            <img
+              src={Thumbnails[7]}
+              alt="thumbnail"
+              className={style.thumbnail}
+            />
+          </a>
+          <a href={URLs[7]}>
+            <h3 className={style.clipTitle}>{Titles[7]}</h3>
+            <h4 className={style.clipViews}>Views: {Views[7]}</h4>
+          </a>
+        </div>
+
+        <div className={style.spacer}></div>
+
+        <div className={style.clipContainer}>
+          <a href={URLs[8]}>
+            <img
+              src={Thumbnails[8]}
+              alt="thumbnail"
+              className={style.thumbnail}
+            />
+          </a>
+          <a href={URLs[8]}>
+            <h3 className={style.clipTitle}>{Titles[8]}</h3>
+            <h4 className={style.clipViews}>Views: {Views[8]}</h4>
+          </a>
+        </div>
+
+        <div className={style.spacer}></div>
+
+        <div className={style.clipContainer}>
+          <a href={URLs[9]}>
+            <img
+              src={Thumbnails[9]}
+              alt="thumbnail"
+              className={style.thumbnail}
+            />
+          </a>
+          <a href={URLs[9]}>
+            <h3 className={style.clipTitle}>{Titles[9]}</h3>
+            <h4 className={style.clipViews}>Views: {Views[9]}</h4>
+          </a>
+        </div>
       </div>
     );
   }

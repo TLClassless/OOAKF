@@ -5,6 +5,7 @@
   width: 100%;
   flex-direction: column;
   color: #172c2d;
+  text-align: left;
 }
 
 .clipsContainer {
@@ -19,6 +20,11 @@
   margin: 0;
   font-size: 1rem;
   color: #172c2d;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  width: 18rem;
 }
 
 .clipViews {
@@ -31,15 +37,32 @@
 .clipContainer {
   display: flex;
   flex-direction: column;
+  width: 18rem;
+  margin-right: 2rem;
+}
+
+.half {
+  width: 38%;
+}
+
+.halfL {
+  align-self: flex-start;
+  margin-left: 10%;
+}
+
+.halfR {
+  align-self: flex-end;
+  margin-right: 10%;
 }
 
 .clipContainer img {
-  height: 10rem;
+  width: 18rem;
+  height: auto;
 }
 
 .spacer {
   display: block;
-  width: 1rem;
+  width: 6px;
 }
 
 .clips {
@@ -62,7 +85,19 @@
     width: 100%;
   }
 
+  .half {
+    width: 100%;
+  }
+
   .clipContainer img {
-    height: 8rem;
+    width: 14rem;
+  }
+
+  .clipContainer {
+    width: 14rem;
+  }
+
+  .halfL {
+    margin-left: 0;
   }
 }
