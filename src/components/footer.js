@@ -1,6 +1,12 @@
 import React, { Component } from "react";
 import style from "../styles/Footer.module.css";
-import { FaTwitch, FaYoutube, FaTwitter, FaInstagram } from "react-icons/fa";
+import {
+  FaTwitch,
+  FaYoutube,
+  FaTwitter,
+  FaInstagram,
+  FaTrophy,
+} from "react-icons/fa";
 
 export class footer extends Component {
   render() {
@@ -19,6 +25,9 @@ export class footer extends Component {
           </a>
           <a href="https://instagram.com/one_of_a_kind_films">
             <FaInstagram />
+          </a>
+          <a href="https://www.speedrun.com/user/OOAKF">
+            <FaTrophy />
           </a>
         </div>
       </div>
