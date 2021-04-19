@@ -1,3 +1,8 @@
+.clipTitle a {
+  text-decoration: none;
+  color: #172c2d;
+}
+
 .container {
   display: flex;
   justify-items: center;
@@ -25,6 +30,7 @@
   text-overflow: ellipsis;
   width: 100%;
   width: 18rem;
+  text-decoration: none;
 }
 
 .clipViews {
@@ -39,20 +45,6 @@
   flex-direction: column;
   width: 18rem;
   margin-right: 2rem;
-}
-
-.half {
-  width: 38%;
-}
-
-.halfL {
-  align-self: flex-start;
-  margin-left: 10%;
-}
-
-.halfR {
-  align-self: flex-end;
-  margin-right: 10%;
 }
 
 .clipContainer img {
@@ -80,12 +72,15 @@
   width: 100%;
 }
 
+.titleLeftAligned {
+  display: flex;
+  width: 38%;
+  align-self: flex-start;
+  margin-left: 10%;
+}
+
 @media only screen and (max-width: 800px) {
   .clipsContainer {
-    width: 100%;
-  }
-
-  .half {
     width: 100%;
   }
 
@@ -97,7 +92,11 @@
     width: 14rem;
   }
 
-  .halfL {
+  .titleLeftAligned {
     margin-left: 0;
+    width: auto;
+    align-self: center;
+    text-align: center;
+    font-size: 1.6rem;
   }
 }

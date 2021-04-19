@@ -99,6 +99,48 @@ export class youtubeVideos extends Component {
             {/* <h4 className={style.clipViews}>Views: {Views[2]}</h4> */}
           </a>
         </div>
+
+        <div className={style.clipContainer}>
+          <a href={URL[5]}>
+            <img
+              src={Thumbnails[5]}
+              alt="thumbnail"
+              className={style.thumbnail}
+            />
+          </a>
+          <a href={URL[5]}>
+            <h3 className={style.clipTitle}>{Titles[5]}</h3>
+            {/* <h4 className={style.clipViews}>Views: {Views[2]}</h4> */}
+          </a>
+        </div>
+
+        <div className={style.clipContainer}>
+          <a href={URL[6]}>
+            <img
+              src={Thumbnails[6]}
+              alt="thumbnail"
+              className={style.thumbnail}
+            />
+          </a>
+          <a href={URL[6]}>
+            <h3 className={style.clipTitle}>{Titles[6]}</h3>
+            {/* <h4 className={style.clipViews}>Views: {Views[2]}</h4> */}
+          </a>
+        </div>
+
+        <div className={style.clipContainer}>
+          <a href={URL[7]}>
+            <img
+              src={Thumbnails[7]}
+              alt="thumbnail"
+              className={style.thumbnail}
+            />
+          </a>
+          <a href={URL[7]}>
+            <h3 className={style.clipTitle}>{Titles[7]}</h3>
+            {/* <h4 className={style.clipViews}>Views: {Views[2]}</h4> */}
+          </a>
+        </div>
       </div>
     );
   }
