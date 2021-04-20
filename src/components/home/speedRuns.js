@@ -15,15 +15,16 @@ export class speedRuns extends Component {
   }
 
   async componentDidMount() {
+    let runTimes = [];
+    let runPlaces = [];
+    let runLinks = [];
+    let gameNames = [];
+    let gameThumbnails = [];
+
     await axios
       .get("https://www.speedrun.com/api/v1/users/8grze17x/personal-bests")
       .then((response) => {
         const thisData = response.data.data;
-        let runTimes = [];
-        let runPlaces = [];
-        let runLinks = [];
-        let gameNames = [];
-        let gameThumbnails = [];
 
         thisData.forEach((element) => {
           runTimes.push(element.run.times.primary_t);
@@ -36,21 +37,27 @@ export class speedRuns extends Component {
 
         gameNameUri.forEach((element) =>
           axios.get(element).then((response) => {
-            console.log(response.data);
             gameNames.push(response.data.data.names.international);
             gameThumbnails.push(response.data.data.assets["cover-large"].uri);
           })
         );
+
+        console.log(runTimes);
+        console.log(gameNames);
+        console.log(gameThumbnails);
+        console.log(runPlaces);
         console.log(runLinks);
-        this.setState({
-          gameName: gameNames,
-          gameThumbnail: gameThumbnails,
-          runTime: runTimes,
-          runPlace: runPlaces,
-          runLink: runLinks,
-        });
       });
+
+    await this.setState({
+      gameName: gameNames,
+      gameThumbnail: gameThumbnails,
+      runTime: runTimes,
+      runPlace: runPlaces,
+      runLink: runLinks,
+    });
   }
+
   render() {
     console.log(this.state.gameName);
     return <div></div>;
