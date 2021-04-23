@@ -15,17 +15,19 @@ export class speedRuns extends Component {
   }
 
   async componentDidMount() {
+    let runNames = [];
+    let runThumbnails = [];
     let runTimes = [];
     let runPlaces = [];
     let runLinks = [];
-    let runNames = [];
-    let runThumbnails = [];
     let gameApi = [];
 
     await axios
       .get("https://www.speedrun.com/api/v1/users/8grze17x/personal-bests")
       .then((response) => {
         const runData = response.data.data;
+
+        console.log(runData);
 
         runData.forEach((element) => {
           runTimes.push(element.run.times.primary_t);
@@ -37,6 +39,12 @@ export class speedRuns extends Component {
             return element.run.links[1].uri;
           })
         );
+
+        this.setState({
+          runTime: runTimes,
+          runPlace: runPlaces,
+          runLink: runLinks,
+        });
       });
 
     const gameApiGet = gameApi[0];
@@ -44,9 +52,13 @@ export class speedRuns extends Component {
     await gameApiGet.forEach((element) => {
       axios.get(element).then((response) => {
         const gameData = response.data.data;
-        console.log(gameData.names.international);
         runNames.push(gameData.names.international);
         runThumbnails.push(gameData.assets["cover-large"].uri);
+
+        this.setState({
+          runName: runNames,
+          runThumbnails: runThumbnails,
+        });
       });
       // runNames.push(responseData.names.international);
     });
@@ -64,14 +76,6 @@ export class speedRuns extends Component {
     console.log(runPlaces);
     console.log(runLinks);
 
-    await this.setState({
-      runName: runNames,
-      runThumbnail: runThumbnails,
-      runTime: runTimes,
-      runPlace: runPlaces,
-      runLink: runLinks,
-    });
-
     console.log(this.state.runName);
   }
 
@@ -88,13 +92,13 @@ export class speedRuns extends Component {
         <div className={style.clipContainer}>
           <a href={URLs[0]}>
             <img
-              src={Thumbnails.indexOf[0]}
+              src={Thumbnails[0]}
               alt="thumbnail"
               className={style.thumbnail}
             />
           </a>
           <a href={URLs[0]}>
-            <h3 className={style.clipTitle}>Game: {Titles}</h3>
+            <h3 className={style.clipTitle}>Game: {Titles[0]}</h3>
             <h4 className={style.clipViews}>Time: {Time[0]}</h4>
             <h4 className={style.clipViews}>Position: {Position[0]}</h4>
           </a>
