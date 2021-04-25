@@ -47,6 +47,19 @@
   margin-right: 2rem;
 }
 
+.speedRunThumbnail {
+  height: 20rem;
+  width: 15rem;
+  object-fit: cover;
+}
+
+.runContainer {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-content: space-between;
+}
+
 .clipContainer img {
   width: 18rem;
   height: auto;

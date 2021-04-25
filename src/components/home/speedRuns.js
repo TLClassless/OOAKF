@@ -57,7 +57,7 @@ export class speedRuns extends Component {
 
         this.setState({
           runName: runNames,
-          runThumbnails: runThumbnails,
+          runThumbnail: runThumbnails,
         });
       });
       // runNames.push(responseData.names.international);
@@ -89,18 +89,108 @@ export class speedRuns extends Component {
 
     return (
       <div className={style.clipsContainer}>
-        <div className={style.clipContainer}>
+        <div className={style.runContainer}>
           <a href={URLs[0]}>
             <img
               src={Thumbnails[0]}
               alt="thumbnail"
-              className={style.thumbnail}
+              className={style.speedRunThumbnail}
             />
           </a>
           <a href={URLs[0]}>
             <h3 className={style.clipTitle}>Game: {Titles[0]}</h3>
             <h4 className={style.clipViews}>Time: {Time[0]}</h4>
             <h4 className={style.clipViews}>Position: {Position[0]}</h4>
+          </a>
+        </div>
+
+        <div className={style.runContainer}>
+          <a href={URLs[1]}>
+            <img
+              src={Thumbnails[1]}
+              alt="thumbnail"
+              className={style.speedRunThumbnail}
+            />
+          </a>
+          <a href={URLs[1]}>
+            <h3 className={style.clipTitle}>Game: {Titles[1]}</h3>
+            <h4 className={style.clipViews}>Time: {Time[1]}</h4>
+            <h4 className={style.clipViews}>Position: {Position[1]}</h4>
+          </a>
+        </div>
+
+        <div className={style.runContainer}>
+          <a href={URLs[2]}>
+            <img
+              src={Thumbnails[2]}
+              alt="thumbnail"
+              className={style.speedRunThumbnail}
+            />
+          </a>
+          <a href={URLs[0]}>
+            <h3 className={style.clipTitle}>Game: {Titles[2]}</h3>
+            <h4 className={style.clipViews}>Time: {Time[2]}</h4>
+            <h4 className={style.clipViews}>Position: {Position[2]}</h4>
+          </a>
+        </div>
+
+        <div className={style.runContainer}>
+          <a href={URLs[3]}>
+            <img
+              src={Thumbnails[3]}
+              alt="thumbnail"
+              className={style.speedRunThumbnail}
+            />
+          </a>
+          <a href={URLs[0]}>
+            <h3 className={style.clipTitle}>Game: {Titles[3]}</h3>
+            <h4 className={style.clipViews}>Time: {Time[3]}</h4>
+            <h4 className={style.clipViews}>Position: {Position[3]}</h4>
+          </a>
+        </div>
+
+        <div className={style.runContainer}>
+          <a href={URLs[4]}>
+            <img
+              src={Thumbnails[4]}
+              alt="thumbnail"
+              className={style.speedRunThumbnail}
+            />
+          </a>
+          <a href={URLs[4]}>
+            <h3 className={style.clipTitle}>Game: {Titles[4]}</h3>
+            <h4 className={style.clipViews}>Time: {Time[4]}</h4>
+            <h4 className={style.clipViews}>Position: {Position[4]}</h4>
+          </a>
+        </div>
+
+        <div className={style.runContainer}>
+          <a href={URLs[5]}>
+            <img
+              src={Thumbnails[5]}
+              alt="thumbnail"
+              className={style.speedRunThumbnail}
+            />
+          </a>
+          <a href={URLs[5]}>
+            <h3 className={style.clipTitle}>Game: {Titles[5]}</h3>
+            <h4 className={style.clipViews}>Time: {Time[5]}</h4>
+            <h4 className={style.clipViews}>Position: {Position[5]}</h4>
+          </a>
+        </div>
+
+        <div className={style.runContainer}>
+          <a href={URLs[6]}>
+            <img
+              src={Thumbnails[6]}
+              alt="thumbnail"
+              className={style.speedRunThumbnail}
+            />
+          </a>
+          <a href={URLs[6]}>
+            <h3 className={style.clipTitle}>Game: {Titles[6]}</h3>
+            <h4 className={style.clipViews}>Time: {Time[6]}</h4>
+            <h4 className={style.clipViews}>Position: {Position[6]}</h4>
           </a>
         </div>
       </div>
