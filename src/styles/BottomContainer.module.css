@@ -94,7 +94,7 @@
 
 @media only screen and (max-width: 800px) {
   .clipsContainer {
-    width: 100%;
+    width: 95%;
   }
 
   .clipContainer img {
@@ -102,6 +102,10 @@
   }
 
   .clipContainer {
+    width: 14rem;
+  }
+
+  .clipTitle {
     width: 14rem;
   }
 
