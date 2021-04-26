@@ -11,6 +11,7 @@ export class speedRuns extends Component {
       runTime: [],
       runPlace: [],
       runLink: [],
+      runCat: [],
     };
   }
 
@@ -20,6 +21,7 @@ export class speedRuns extends Component {
     let runTimes = [];
     let runPlaces = [];
     let runLinks = [];
+    let runCats = [];
     let gameApi = [];
 
     await axios
@@ -39,6 +41,11 @@ export class speedRuns extends Component {
             return element.run.links[1].uri;
           })
         );
+        gameApi.push(
+          runData.map(function (element) {
+            return element.run.links[2].uri;
+          })
+        );
 
         this.setState({
           runTime: runTimes,
@@ -48,6 +55,7 @@ export class speedRuns extends Component {
       });
 
     const gameApiGet = gameApi[0];
+    const catApiGet = gameApi[1];
 
     await gameApiGet.forEach((element) => {
       axios.get(element).then((response) => {
@@ -70,13 +78,23 @@ export class speedRuns extends Component {
 
     // })
 
+    await catApiGet.forEach((element) => {
+      axios.get(element).then((response) => {
+        const catData = response.data.data;
+        runCats.push(catData.name);
+
+        this.setState({
+          runCat: runCats,
+        });
+      });
+    });
+
     console.log(runTimes);
     console.log(runNames);
     console.log(runThumbnails);
     console.log(runPlaces);
     console.log(runLinks);
-
-    console.log(this.state.runName);
+    console.log(runCats);
   }
 
   render() {
@@ -86,6 +104,7 @@ export class speedRuns extends Component {
     const Thumbnails = this.state.runThumbnail;
     const Position = this.state.runPlace;
     const Time = this.state.runTime;
+    const Category = this.state.runCat;
 
     return (
       <div className={style.clipsContainer}>
@@ -99,6 +118,7 @@ export class speedRuns extends Component {
           </a>
           <a href={URLs[0]}>
             <h3 className={style.clipTitle}>Game: {Titles[0]}</h3>
+            <h3 className={style.clipViews}>Category: {Category[0]}</h3>
             <h4 className={style.clipViews}>Time: {Time[0]}</h4>
             <h4 className={style.clipViews}>Position: {Position[0]}</h4>
           </a>
@@ -114,6 +134,7 @@ export class speedRuns extends Component {
           </a>
           <a href={URLs[1]}>
             <h3 className={style.clipTitle}>Game: {Titles[1]}</h3>
+            <h3 className={style.clipViews}>Category: {Category[1]}</h3>
             <h4 className={style.clipViews}>Time: {Time[1]}</h4>
             <h4 className={style.clipViews}>Position: {Position[1]}</h4>
           </a>
@@ -129,6 +150,7 @@ export class speedRuns extends Component {
           </a>
           <a href={URLs[0]}>
             <h3 className={style.clipTitle}>Game: {Titles[2]}</h3>
+            <h3 className={style.clipViews}>Category: {Category[2]}</h3>
             <h4 className={style.clipViews}>Time: {Time[2]}</h4>
             <h4 className={style.clipViews}>Position: {Position[2]}</h4>
           </a>
@@ -144,6 +166,7 @@ export class speedRuns extends Component {
           </a>
           <a href={URLs[0]}>
             <h3 className={style.clipTitle}>Game: {Titles[3]}</h3>
+            <h3 className={style.clipViews}>Category: {Category[3]}</h3>
             <h4 className={style.clipViews}>Time: {Time[3]}</h4>
             <h4 className={style.clipViews}>Position: {Position[3]}</h4>
           </a>
@@ -159,6 +182,7 @@ export class speedRuns extends Component {
           </a>
           <a href={URLs[4]}>
             <h3 className={style.clipTitle}>Game: {Titles[4]}</h3>
+            <h3 className={style.clipViews}>Category: {Category[4]}</h3>
             <h4 className={style.clipViews}>Time: {Time[4]}</h4>
             <h4 className={style.clipViews}>Position: {Position[4]}</h4>
           </a>
@@ -174,6 +198,7 @@ export class speedRuns extends Component {
           </a>
           <a href={URLs[5]}>
             <h3 className={style.clipTitle}>Game: {Titles[5]}</h3>
+            <h3 className={style.clipViews}>Category: {Category[5]}</h3>
             <h4 className={style.clipViews}>Time: {Time[5]}</h4>
             <h4 className={style.clipViews}>Position: {Position[5]}</h4>
           </a>
@@ -189,6 +214,7 @@ export class speedRuns extends Component {
           </a>
           <a href={URLs[6]}>
             <h3 className={style.clipTitle}>Game: {Titles[6]}</h3>
+            <h3 className={style.clipViews}>Category: {Category[6]}</h3>
             <h4 className={style.clipViews}>Time: {Time[6]}</h4>
             <h4 className={style.clipViews}>Position: {Position[6]}</h4>
           </a>
