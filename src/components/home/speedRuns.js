@@ -23,6 +23,7 @@ export class speedRuns extends Component {
     let runLinks = [];
     let runCats = [];
     let gameApi = [];
+    let catApi = [];
 
     await axios
       .get("https://www.speedrun.com/api/v1/users/8grze17x/personal-bests")
@@ -35,17 +36,19 @@ export class speedRuns extends Component {
           runTimes.push(element.run.times.primary_t);
           runPlaces.push(element.place);
           runLinks.push(element.run.weblink);
+          gameApi.push(element.run.links[1].uri);
+          catApi.push(element.run.links[2].uri);
         });
-        gameApi.push(
-          runData.map(function (element) {
-            return element.run.links[1].uri;
-          })
-        );
-        gameApi.push(
-          runData.map(function (element) {
-            return element.run.links[2].uri;
-          })
-        );
+        // gameApi.push(
+        //   runData.map(function (element) {
+        //     return element.run.links[1].uri;
+        //   })
+        // );
+        // gameApi.push(
+        //   runData.map(function (element) {
+        //     return element.run.links[2].uri;
+        //   })
+        // );
 
         this.setState({
           runTime: runTimes,
@@ -54,8 +57,8 @@ export class speedRuns extends Component {
         });
       });
 
-    const gameApiGet = gameApi[0];
-    const catApiGet = gameApi[1];
+    const gameApiGet = gameApi;
+    const catApiGet = catApi;
 
     await gameApiGet.forEach((element) => {
       axios.get(element).then((response) => {
@@ -89,16 +92,16 @@ export class speedRuns extends Component {
       });
     });
 
-    console.log(runTimes);
-    console.log(runNames);
-    console.log(runThumbnails);
-    console.log(runPlaces);
-    console.log(runLinks);
-    console.log(runCats);
+    // console.log(runTimes);
+    // console.log(runNames);
+    // console.log(runThumbnails);
+    // console.log(runPlaces);
+    // console.log(runLinks);
+    // console.log(runCats);
   }
 
   render() {
-    console.log(this.state.runName);
+    console.log(this.state.runCats);
     const URLs = this.state.runLink;
     const Titles = this.state.runName;
     const Thumbnails = this.state.runThumbnail;
