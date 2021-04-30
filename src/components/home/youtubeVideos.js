@@ -32,6 +32,10 @@ export class youtubeVideos extends Component {
       return element.snippet.title;
     });
 
+    const Channel = Array.map(function (element) {
+      return element.snippet.channelTitle;
+    });
+
     const Thumbnails = Array.map(function (element) {
       return element.snippet.thumbnails.medium.url;
     });
@@ -54,7 +58,7 @@ export class youtubeVideos extends Component {
           </a>
           <a href={URL[1]}>
             <h3 className={style.clipTitle}>{Titles[1]}</h3>
-            {/* <h4 className={style.clipViews}>Views: {Views[2]}</h4> */}
+            <h4 className={style.clipViews}>Channel: {Channel[1]}</h4>
           </a>
         </div>
 
@@ -68,7 +72,7 @@ export class youtubeVideos extends Component {
           </a>
           <a href={URL[2]}>
             <h3 className={style.clipTitle}>{Titles[2]}</h3>
-            {/* <h4 className={style.clipViews}>Views: {Views[2]}</h4> */}
+            <h4 className={style.clipViews}>Channel: {Channel[2]}</h4>
           </a>
         </div>
 
@@ -82,7 +86,7 @@ export class youtubeVideos extends Component {
           </a>
           <a href={URL[3]}>
             <h3 className={style.clipTitle}>{Titles[3]}</h3>
-            {/* <h4 className={style.clipViews}>Views: {Views[2]}</h4> */}
+            <h4 className={style.clipViews}>Channel: {Channel[3]}</h4>
           </a>
         </div>
 
@@ -96,7 +100,7 @@ export class youtubeVideos extends Component {
           </a>
           <a href={URL[4]}>
             <h3 className={style.clipTitle}>{Titles[4]}</h3>
-            {/* <h4 className={style.clipViews}>Views: {Views[2]}</h4> */}
+            <h4 className={style.clipViews}>Channel: {Channel[4]}</h4>
           </a>
         </div>
 
@@ -110,7 +114,7 @@ export class youtubeVideos extends Component {
           </a>
           <a href={URL[5]}>
             <h3 className={style.clipTitle}>{Titles[5]}</h3>
-            {/* <h4 className={style.clipViews}>Views: {Views[2]}</h4> */}
+            <h4 className={style.clipViews}>Channel: {Channel[5]}</h4>
           </a>
         </div>
 
@@ -124,7 +128,7 @@ export class youtubeVideos extends Component {
           </a>
           <a href={URL[6]}>
             <h3 className={style.clipTitle}>{Titles[6]}</h3>
-            {/* <h4 className={style.clipViews}>Views: {Views[2]}</h4> */}
+            <h4 className={style.clipViews}>Channel: {Channel[6]}</h4>
           </a>
         </div>
 
@@ -138,7 +142,7 @@ export class youtubeVideos extends Component {
           </a>
           <a href={URL[7]}>
             <h3 className={style.clipTitle}>{Titles[7]}</h3>
-            {/* <h4 className={style.clipViews}>Views: {Views[2]}</h4> */}
+            <h4 className={style.clipViews}>Channel: {Channel[7]}</h4>
           </a>
         </div>
       </div>
