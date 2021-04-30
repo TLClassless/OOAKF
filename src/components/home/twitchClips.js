@@ -42,16 +42,16 @@ export class twitchClips extends Component {
   render() {
     const Array = this.state.data;
 
-    // Array.forEach((element) => console.log(element.title));
-    // Array.forEach((element) => console.log(element.thumbnails.small));
-    // Array.forEach((element) => console.log(element.url));
-
     const Titles = Array.map(function (element) {
       return element.title;
     });
 
     const Views = Array.map(function (element) {
       return element.views;
+    });
+
+    const Games = Array.map(function (element) {
+      return element.game;
     });
 
     const Thumbnails = Array.map(function (element) {
@@ -74,6 +74,7 @@ export class twitchClips extends Component {
           </a>
           <a href={URLs[0]}>
             <h3 className={style.clipTitle}>{Titles[0]}</h3>
+            <h4 className={style.clipViews}>Playing: {Games[0]}</h4>
             <h4 className={style.clipViews}>Views: {Views[0]}</h4>
           </a>
         </div>
@@ -90,6 +91,7 @@ export class twitchClips extends Component {
           </a>
           <a href={URLs[1]}>
             <h3 className={style.clipTitle}>{Titles[1]}</h3>
+            <h4 className={style.clipViews}>Playing: {Games[1]}</h4>
             <h4 className={style.clipViews}>Views: {Views[1]}</h4>
           </a>
         </div>
@@ -106,6 +108,7 @@ export class twitchClips extends Component {
           </a>
           <a href={URLs[2]}>
             <h3 className={style.clipTitle}>{Titles[2]}</h3>
+            <h4 className={style.clipViews}>Playing: {Games[2]}</h4>
             <h4 className={style.clipViews}>Views: {Views[2]}</h4>
           </a>
         </div>
@@ -122,6 +125,7 @@ export class twitchClips extends Component {
           </a>
           <a href={URLs[3]}>
             <h3 className={style.clipTitle}>{Titles[3]}</h3>
+            <h4 className={style.clipViews}>Playing: {Games[3]}</h4>
             <h4 className={style.clipViews}>Views: {Views[3]}</h4>
           </a>
         </div>
@@ -138,6 +142,7 @@ export class twitchClips extends Component {
           </a>
           <a href={URLs[4]}>
             <h3 className={style.clipTitle}>{Titles[4]}</h3>
+            <h4 className={style.clipViews}>Playing: {Games[4]}</h4>
             <h4 className={style.clipViews}>Views: {Views[4]}</h4>
           </a>
         </div>
@@ -154,6 +159,7 @@ export class twitchClips extends Component {
           </a>
           <a href={URLs[5]}>
             <h3 className={style.clipTitle}>{Titles[5]}</h3>
+            <h4 className={style.clipViews}>Playing: {Games[5]}</h4>
             <h4 className={style.clipViews}>Views: {Views[5]}</h4>
           </a>
         </div>
@@ -170,6 +176,7 @@ export class twitchClips extends Component {
           </a>
           <a href={URLs[6]}>
             <h3 className={style.clipTitle}>{Titles[6]}</h3>
+            <h4 className={style.clipViews}>Playing: {Games[6]}</h4>
             <h4 className={style.clipViews}>Views: {Views[6]}</h4>
           </a>
         </div>
@@ -186,6 +193,7 @@ export class twitchClips extends Component {
           </a>
           <a href={URLs[7]}>
             <h3 className={style.clipTitle}>{Titles[7]}</h3>
+            <h4 className={style.clipViews}>Playing: {Games[7]}</h4>
             <h4 className={style.clipViews}>Views: {Views[7]}</h4>
           </a>
         </div>
@@ -202,6 +210,7 @@ export class twitchClips extends Component {
           </a>
           <a href={URLs[8]}>
             <h3 className={style.clipTitle}>{Titles[8]}</h3>
+            <h4 className={style.clipViews}>Playing: {Games[8]}</h4>
             <h4 className={style.clipViews}>Views: {Views[8]}</h4>
           </a>
         </div>
@@ -218,6 +227,7 @@ export class twitchClips extends Component {
           </a>
           <a href={URLs[9]}>
             <h3 className={style.clipTitle}>{Titles[9]}</h3>
+            <h4 className={style.clipViews}>Playing: {Games[9]}</h4>
             <h4 className={style.clipViews}>Views: {Views[9]}</h4>
           </a>
         </div>
