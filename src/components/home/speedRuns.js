@@ -12,6 +12,10 @@ export class speedRuns extends Component {
       runPlace: [],
       runLink: [],
       runCat: [],
+      gameApi: [],
+      catApi: [],
+
+      runs: [],
     };
   }
 
@@ -39,65 +43,42 @@ export class speedRuns extends Component {
           gameApi.push(element.run.links[1].uri);
           catApi.push(element.run.links[2].uri);
         });
-        // gameApi.push(
-        //   runData.map(function (element) {
-        //     return element.run.links[1].uri;
-        //   })
-        // );
-        // gameApi.push(
-        //   runData.map(function (element) {
-        //     return element.run.links[2].uri;
-        //   })
-        // );
 
         this.setState({
           runTime: runTimes,
           runPlace: runPlaces,
           runLink: runLinks,
+          gameApi: gameApi,
+          catApi: catApi,
+        });
+
+        const gameApiGet = this.state.gameApi;
+        const catApiGet = this.state.catApi;
+
+        gameApiGet.forEach((element) => {
+          axios.get(element).then((response) => {
+            const gameData = response.data.data;
+            runNames.push(gameData.names.international);
+            runThumbnails.push(gameData.assets["cover-large"].uri);
+
+            this.setState({
+              runName: runNames,
+              runThumbnail: runThumbnails,
+            });
+          });
+        });
+
+        catApiGet.forEach((element) => {
+          axios.get(element).then((response) => {
+            const catData = response.data.data;
+            runCats.push(catData.name);
+
+            this.setState({
+              runCat: runCats,
+            });
+          });
         });
       });
-
-    const gameApiGet = gameApi;
-    const catApiGet = catApi;
-
-    await gameApiGet.forEach((element) => {
-      axios.get(element).then((response) => {
-        const gameData = response.data.data;
-        runNames.push(gameData.names.international);
-        runThumbnails.push(gameData.assets["cover-large"].uri);
-
-        this.setState({
-          runName: runNames,
-          runThumbnail: runThumbnails,
-        });
-      });
-      // runNames.push(responseData.names.international);
-    });
-    // .then((response) => {
-    //   const runNameUri = response.data.data.map(function (element) {
-    //     return element.run.links[1].uri;
-    //   });
-    //   await axios.get()
-
-    // })
-
-    await catApiGet.forEach((element) => {
-      axios.get(element).then((response) => {
-        const catData = response.data.data;
-        runCats.push(catData.name);
-
-        this.setState({
-          runCat: runCats,
-        });
-      });
-    });
-
-    // console.log(runTimes);
-    // console.log(runNames);
-    // console.log(runThumbnails);
-    // console.log(runPlaces);
-    // console.log(runLinks);
-    // console.log(runCats);
   }
 
   render() {
