@@ -45,6 +45,7 @@
   flex-direction: column;
   width: 18rem;
   margin-right: 2rem;
+  padding-bottom: 0.2rem;
 }
 
 .speedRunThumbnail {
@@ -57,7 +58,9 @@
   display: flex;
   width: 100%;
   flex-direction: column;
-  align-content: space-between;
+  /* align-content: space-between; */
+  margin-right: 1rem;
+  padding-bottom: 0.2rem;
 }
 
 .clipContainer img {
@@ -99,6 +102,7 @@
   .clipContainer {
     width: 14rem;
     margin-right: 0.5rem;
+    padding-bottom: 0.8rem;
   }
 
   .clipTitle {
@@ -117,5 +121,6 @@
     width: 14rem;
     margin-right: 0.5rem;
     align-content: auto;
+    padding-bottom: 0.8rem;
   }
 }

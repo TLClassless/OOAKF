@@ -78,6 +78,10 @@ h3 {
     font-weight: 700;
   }
 
+  .branding {
+    margin-left: 0;
+  }
+
   .navigation {
     display: none;
   }
