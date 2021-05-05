@@ -27,7 +27,7 @@ export class twitchVods extends Component {
       })
       .then((response) => {
         const thisData = response.data.videos;
-        console.log(thisData);
+
         this.setState({
           data: thisData,
         });
@@ -38,8 +38,6 @@ export class twitchVods extends Component {
 
   render() {
     const Array = this.state.data;
-
-    console.log(Array);
 
     Array.forEach((element) => console.log(element.title));
     Array.forEach((element) => console.log(element.thumbnails.small));

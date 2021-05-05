@@ -7,6 +7,7 @@ import {
   FaInstagram,
   FaTrophy,
 } from "react-icons/fa";
+import { BrowserRouter as Router, Link } from "react-router-dom";
 
 export class header extends Component {
   render() {
@@ -18,47 +19,49 @@ export class header extends Component {
           </a>
           {/* <h3>Call me Oak</h3> */}
         </div>
-        <ul className={style.navigation}>
-          <li>
-            <a href="/about">About</a>
-          </li>
-          <li>
-            <a href="https://streamlabs.com/ooakf/tip">Donate</a>
-          </li>
-          <li>
-            <a
-              className={style.subscribe}
-              href="https://www.twitch.tv/products/ooakf"
-            >
-              Subscribe
-            </a>
-          </li>
-          <li>
-            <a href="https://twitch.tv/ooakf">
-              <FaTwitch />
-            </a>
-          </li>
-          <li>
-            <a href="https://youtube.com/theoneofakindfilms">
-              <FaYoutube />
-            </a>
-          </li>
-          <li>
-            <a href="https://twitter.com/ooakf">
-              <FaTwitter />
-            </a>{" "}
-          </li>
-          <li>
-            <a href="https://instagram.com/one_of_a_kind_films">
-              <FaInstagram />
-            </a>
-          </li>
-          <li>
-            <a href="https://www.speedrun.com/user/OOAKF">
-              <FaTrophy />
-            </a>
-          </li>
-        </ul>
+        <Router>
+          <ul className={style.navigation}>
+            <li>
+              <a href="/about">About</a>
+            </li>
+            <li>
+              <a href="https://streamlabs.com/ooakf/tip">Donate</a>
+            </li>
+            <li>
+              <a
+                className={style.subscribe}
+                href="https://www.twitch.tv/products/ooakf"
+              >
+                Subscribe
+              </a>
+            </li>
+            <li>
+              <a href="https://twitch.tv/ooakf">
+                <FaTwitch />
+              </a>
+            </li>
+            <li>
+              <a href="https://youtube.com/theoneofakindfilms">
+                <FaYoutube />
+              </a>
+            </li>
+            <li>
+              <a href="https://twitter.com/ooakf">
+                <FaTwitter />
+              </a>
+            </li>
+            <li>
+              <a href="https://instagram.com/one_of_a_kind_films">
+                <FaInstagram />
+              </a>
+            </li>
+            <li>
+              <a href="https://www.speedrun.com/user/OOAKF">
+                <FaTrophy />
+              </a>
+            </li>
+          </ul>
+        </Router>
       </div>
     );
   }
