@@ -13,8 +13,21 @@
 }
 
 .aboutContainer {
-  height: 60%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   width: 60%;
   padding: 2rem;
   background-color: #fff;
+}
+
+.aboutContainer h1 {
+  text-align: center;
+  color: #172c2d;
+}
+
+.profilePicture {
+  height: 16rem;
+  width: auto;
+  margin-left: 2rem;
 }

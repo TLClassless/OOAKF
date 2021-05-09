@@ -7,7 +7,7 @@ import {
   FaInstagram,
   FaTrophy,
 } from "react-icons/fa";
-import { BrowserRouter as Router, Link } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 
 export class header extends Component {
   render() {
