@@ -27,7 +27,31 @@
 }
 
 .profilePicture {
+  display: flex;
   height: 16rem;
   width: auto;
   margin-left: 2rem;
+}
+
+@media only screen and (max-width: 800px) {
+  .aboutContainer {
+    width: 100%;
+    flex-direction: column;
+    padding: 0;
+    margin-top: 13%;
+  }
+
+  .aboutText {
+    margin: 1rem;
+  }
+
+  .topContainer {
+    height: auto;
+    background-attachment: fixed;
+  }
+
+  .profilePicture {
+    margin-left: 0;
+    margin-bottom: 1rem;
+  }
 }
