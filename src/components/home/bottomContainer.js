@@ -27,8 +27,8 @@ export class bottomContainer extends Component {
           </a>
         </h1>
         <Youtube />
-        <h1 className={style.titleLeftAligned}>Personal Best Speed Runs</h1>
-        <SpeedRun />
+        {/* <h1 className={style.titleLeftAligned}>Personal Best Speed Runs</h1>
+        <SpeedRun /> */}
       </main>
     );
   }

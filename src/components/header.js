@@ -7,9 +7,13 @@ import {
   FaInstagram,
   FaTrophy,
 } from "react-icons/fa";
+import { slide as Menu } from "react-burger-menu";
 import { BrowserRouter as Router } from "react-router-dom";
 
 export class header extends Component {
+  showSettings(event) {
+    event.preventDefault();
+  }
   render() {
     return (
       <div className={style.navbar}>
@@ -62,6 +66,14 @@ export class header extends Component {
             </li>
           </ul>
         </Router>
+        <Menu>
+          <a id="home" className="menu-item" href="/">
+            Home
+          </a>
+          <a id="about" className="menu-item" href="/about">
+            About
+          </a>
+        </Menu>
       </div>
     );
   }

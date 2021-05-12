@@ -6,7 +6,7 @@ export class speedRuns extends Component {
   constructor() {
     super();
     this.state = {
-      runName: [],
+      gameName: [],
       runThumbnail: [],
       runTime: [],
       runPlace: [],
@@ -19,17 +19,16 @@ export class speedRuns extends Component {
     };
   }
 
-  async componentDidMount() {
-    let runNames = [];
-    let runThumbnails = [];
+  componentDidMount() {
+    let runs = [];
     let runTimes = [];
     let runPlaces = [];
     let runLinks = [];
-    let runCats = [];
-    let gameApi = [];
-    let catApi = [];
+    let gameNames = [];
+    let gameThumbs = [];
+    let catNames = [];
 
-    await axios
+    axios
       .get("https://www.speedrun.com/api/v1/users/8grze17x/personal-bests")
       .then((response) => {
         const runData = response.data.data;
@@ -37,113 +36,60 @@ export class speedRuns extends Component {
         console.log("first", runData);
 
         runData.forEach((element) => {
-          runTimes.push(element.run.times.primary_t);
+          runs.push(element.run);
           runPlaces.push(element.place);
-          runLinks.push(element.run.weblink);
-          gameApi.push(element.run.links[1].uri);
-          catApi.push(element.run.links[2].uri);
         });
 
-        console.log(gameApi, catApi);
+        this.setState({ runs: runs });
 
-        this.setState({
-          runTime: runTimes,
-          runPlace: runPlaces,
-          runLink: runLinks,
-          gameApi: gameApi,
-          catApi: catApi,
+        console.log("state test", this.state.runs);
+
+        this.state.runs.forEach((element) => {
+          runTimes.push(element.times.primary_t);
+          runLinks.push(element.weblink);
+          gameNames.push(
+            axios
+              .get(element.links[1].uri)
+              .then((response) => response.data.data.names.international)
+          );
+          gameThumbs.push(
+            axios
+              .get(element.links[1].uri)
+              .then((response) => response.data.data.assets["cover-large"].uri)
+          );
+          catNames.push(
+            axios
+              .get(element.links[2].uri)
+              .then((response) => response.data.data.name)
+          );
         });
 
-        const gameApiGet = gameApi;
-        const catApiGet = catApi;
-
-        var i = 0;
-        var n = 0;
-
-        var ii = 0;
-        var nn = 0;
-
-        var bar = new Promise((resolve, reject) => {
-          gameApiGet.forEach((element) => {
-            n++;
-            console.log("el", element, n);
-
-            axios.get(element).then((response) => {
-              const gameData = response.data.data;
-              console.log(gameData, i);
-              i++;
-              runNames.push(gameData.names.international);
-              runThumbnails.push(gameData.assets["cover-large"].uri);
-
-              console.log(gameData.names.international);
-
-              console.log("len", gameApiGet.length);
-              console.log("i", i, gameData.names.international);
-              if (i === 7) resolve();
-            });
-          });
-        });
-
-        var foo = new Promise((resolve, reject) => {
-          catApiGet.forEach((element) => {
-            nn++;
-            console.log("el", element, nn);
-
-            axios.get(element).then((response) => {
-              const catData = response.data.data;
-              runCats.push(catData.name);
-              console.log(catData.name, ii);
-              ii++;
-              console.log("fakeii", ii);
-              if (ii === 7) resolve();
-              // this.setState({
-              //   runCat: runCats,
-              //   iikey: ii,
-              // });
-            });
-          });
-        });
-
-        Promise.all([bar, foo]).then((data) => {
-          console.log("All done!", i, ii);
-          console.log("foo", runNames);
-          console.log("bar", runCats);
-          this.setState({
-            runName: runNames,
-            runThumbnail: runThumbnails,
-            ikey: i,
-            runCat: runCats,
-            iikey: ii,
-          });
-        });
-
-        // this.setState({
-        //   runName: runNames,
-        //   runThumbnail: runThumbnails,
-        //   ikey: i,
-        // });
+        console.log("runTimes", runTimes);
+        console.log("gamenames maybe", gameNames);
+        console.log("catnames maybe", catNames);
+        console.log("gameThumbs maybe", gameThumbs[0]);
       });
+
+    this.setState({
+      gameName: gameNames,
+    });
   }
 
   render() {
     // console.log(this.state.runCats);
-    const URLs = this.state.runLink;
+    // const URLs = this.state.runLink;
     const Titles = this.state.runName;
     const Thumbnails = this.state.runThumbnail;
-    const Position = this.state.runPlace;
-    const Time = this.state.runTime;
+    // const Position = this.state.runPlace;
+    // const Time = this.state.runTime;
     const Category = this.state.runCat;
-
-    console.log("ii", Category);
-    console.log("i", Titles);
-    console.log("i", Thumbnails);
     // console.log(Titles);
     // console.log(Category);
     // console.log(Position);
 
     return (
       <div className={style.clipsContainer}>
-        <div className={style.runContainer}>
+        {/* <div className={style.runContainer}>
           <a href={URLs[0]}>
             <img
               src={Thumbnails[0]}
@@ -253,7 +199,7 @@ export class speedRuns extends Component {
             <h4 className={style.clipViews}>Time: {Time[6]}</h4>
             <h4 className={style.clipViews}>Position: {Position[6]}</h4>
           </a>
-        </div>
+        </div> */}
       </div>
     );
   }
