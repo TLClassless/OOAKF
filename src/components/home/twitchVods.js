@@ -3,7 +3,6 @@ import style from "../../styles/BottomContainer.module.css";
 import axios from "axios";
 
 const CLIENT_ID = process.env.REACT_APP_CLIENT_ID;
-const TWITCH_SECRET = process.env.REACT_APP_API_SECRET;
 
 export class twitchVods extends Component {
   constructor() {
@@ -14,8 +13,6 @@ export class twitchVods extends Component {
   }
 
   async componentDidMount() {
-    console.log(CLIENT_ID, TWITCH_SECRET);
-
     const headers = {
       "Client-ID": CLIENT_ID,
       Accept: "application/vnd.twitchtv.v5+json",
@@ -39,9 +36,9 @@ export class twitchVods extends Component {
   render() {
     const Array = this.state.data;
 
-    Array.forEach((element) => console.log(element.title));
-    Array.forEach((element) => console.log(element.thumbnails.small));
-    Array.forEach((element) => console.log(element.url));
+    // Array.forEach((element) => console.log(element.title));
+    // Array.forEach((element) => console.log(element.thumbnails.small));
+    // Array.forEach((element) => console.log(element.url));
 
     const Titles = Array.map(function (element) {
       return element.title;

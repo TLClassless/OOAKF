@@ -3,12 +3,10 @@ import style from "../../styles/BottomContainer.module.css";
 import Clips from "./twitchClips.js";
 import VODs from "./twitchVods.js";
 import Youtube from "./youtubeVideos.js";
-import SpeedRun from "./speedRuns.js";
-const YOUTUBE_KEY = process.env.REACT_APP_YOUTUBE_API_SECRET;
+// import SpeedRun from "./speedRuns.js";
 
 export class bottomContainer extends Component {
   render() {
-    console.log(YOUTUBE_KEY);
     return (
       <main className={style.container}>
         <h1 className={style.titleLeftAligned}>

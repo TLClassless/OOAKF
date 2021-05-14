@@ -12,7 +12,6 @@ export class youtubeVideos extends Component {
   }
 
   async componentDidMount() {
-    console.log(YOUTUBE_KEY);
     const response = await youtube.get("/playlistItems", {
       params: {
         playlistId: "PL1Iie15gC15gNHozS35CbOelNb5ZbhQvx",
@@ -24,8 +23,6 @@ export class youtubeVideos extends Component {
   }
 
   render() {
-    console.log(this.state.videos);
-
     const Array = this.state.videos;
 
     const Titles = Array.map(function (element) {
@@ -47,7 +44,7 @@ export class youtubeVideos extends Component {
     const URL = "https://youtube.com/" + URLs[0];
 
     return (
-      <div className={`${style.clipsContainer} ${style.half} ${style.halfL}`}>
+      <div className={`${style.clipsContainer} ${style.bottom}`}>
         <div className={style.clipContainer}>
           <a href={URL[1]}>
             <img
