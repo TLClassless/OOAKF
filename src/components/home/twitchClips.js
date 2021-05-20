@@ -3,7 +3,7 @@ import style from "../../styles/BottomContainer.module.css";
 import axios from "axios";
 
 const CLIENT_ID = process.env.REACT_APP_CLIENT_ID;
-const TWITCH_SECRET = process.env.REACT_APP_API_SECRET;
+// const TWITCH_SECRET = process.env.REACT_APP_API_SECRET;
 
 export class twitchClips extends Component {
   constructor() {
@@ -14,8 +14,6 @@ export class twitchClips extends Component {
   }
 
   async componentDidMount() {
-    console.log(CLIENT_ID, TWITCH_SECRET);
-
     const headers = {
       "Client-ID": CLIENT_ID,
       Accept: "application/vnd.twitchtv.v5+json",
@@ -30,7 +28,6 @@ export class twitchClips extends Component {
       )
       .then((response) => {
         const thisData = response.data.clips;
-        console.log(thisData);
         this.setState({
           data: thisData,
         });
