@@ -10,20 +10,21 @@ export class about extends Component {
           <div className={style.aboutText}>
             <h1>Hi, I'm Cameron!</h1>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum.
+              Welcome to my site, let me introduce myself. I'm a Twitch variety
+              streamer, I play games like Valorant, Minecraft, League and
+              Resident Evil, I've also been known to dabble in speedrunning,
+              mostly in Portal, but I also hold a solidly average time on the
+              Overwatch Tutorial 3.0. Along side this I draw some beautiful™
+              works of art on stream for my viewers (for the right price).
               <br /> <br />
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-              quae ab illo inventore veritatis et quasi architecto beatae vitae
-              dicta sunt explicabo.
+              Outside of streaming, I'm 25, studying Film at Salford University
+              in Manchester and a master of Spag Bol (thanks Ben), for any
+              business enquiries feel free to{" "}
+              <a href="mailto:oneofakindfilmscameron@gmail.com">
+                email me
+              </a> or <a href="https://twitter.com/ooakf">DM me on Twitter</a>
               <br /> <br />
-              Thanks for watching!
+              Thanks for watching and supporting!
               <br /> <br />- Cameron
             </p>
           </div>
