@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import style from "../../styles/BottomContainer.module.css";
 import youtube from "../../api/youtube";
-const YOUTUBE_KEY = process.env.REACT_APP_YOUTUBE_API_SECRET;
 
 export class youtubeVideos extends Component {
   constructor() {
