@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/OOAKF/static/css/main.10bac8ae.chunk.css",
-    "main.js": "/OOAKF/static/js/main.3146dc32.chunk.js",
-    "main.js.map": "/OOAKF/static/js/main.3146dc32.chunk.js.map",
-    "runtime-main.js": "/OOAKF/static/js/runtime-main.7b07ea55.js",
-    "runtime-main.js.map": "/OOAKF/static/js/runtime-main.7b07ea55.js.map",
-    "static/js/2.f671a678.chunk.js": "/OOAKF/static/js/2.f671a678.chunk.js",
-    "static/js/2.f671a678.chunk.js.map": "/OOAKF/static/js/2.f671a678.chunk.js.map",
-    "static/js/3.e1d578d6.chunk.js": "/OOAKF/static/js/3.e1d578d6.chunk.js",
-    "static/js/3.e1d578d6.chunk.js.map": "/OOAKF/static/js/3.e1d578d6.chunk.js.map",
-    "index.html": "/OOAKF/index.html",
-    "static/css/main.10bac8ae.chunk.css.map": "/OOAKF/static/css/main.10bac8ae.chunk.css.map",
-    "static/js/2.f671a678.chunk.js.LICENSE.txt": "/OOAKF/static/js/2.f671a678.chunk.js.LICENSE.txt",
-    "static/media/ooakf_portrait.d772f2aa.jpg": "/OOAKF/static/media/ooakf_portrait.d772f2aa.jpg",
-    "static/media/About.module.css": "/OOAKF/static/media/pixel-bg.c160380b.png"
+    "main.css": "/static/css/main.5cfd49e8.chunk.css",
+    "main.js": "/static/js/main.3146dc32.chunk.js",
+    "main.js.map": "/static/js/main.3146dc32.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.663ee61e.js",
+    "runtime-main.js.map": "/static/js/runtime-main.663ee61e.js.map",
+    "static/js/2.f671a678.chunk.js": "/static/js/2.f671a678.chunk.js",
+    "static/js/2.f671a678.chunk.js.map": "/static/js/2.f671a678.chunk.js.map",
+    "static/js/3.e1d578d6.chunk.js": "/static/js/3.e1d578d6.chunk.js",
+    "static/js/3.e1d578d6.chunk.js.map": "/static/js/3.e1d578d6.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.5cfd49e8.chunk.css.map": "/static/css/main.5cfd49e8.chunk.css.map",
+    "static/js/2.f671a678.chunk.js.LICENSE.txt": "/static/js/2.f671a678.chunk.js.LICENSE.txt",
+    "static/media/ooakf_portrait.d772f2aa.jpg": "/static/media/ooakf_portrait.d772f2aa.jpg",
+    "static/media/About.module.css": "/static/media/pixel-bg.c160380b.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.7b07ea55.js",
+    "static/js/runtime-main.663ee61e.js",
     "static/js/2.f671a678.chunk.js",
-    "static/css/main.10bac8ae.chunk.css",
+    "static/css/main.5cfd49e8.chunk.css",
     "static/js/main.3146dc32.chunk.js"
   ]
 }
